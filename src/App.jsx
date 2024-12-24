@@ -5,7 +5,7 @@ import LocationForm from "./components/LocationForm";
 import Map from "./components/Map";
 import RouteDetails from "./components/RouteDetails";
 import { getElevationsForLocations } from "./utils/ElevationService";
-import roundTripLogo from './assets/RoundTripLogo.png'
+import roundTripLogo from './assets/RoundTripLogoNoOP.png'
 import "./App.css";
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
             <img
               src={roundTripLogo}
               alt="Round Trip Logo"
-              style={{ width: "350px", margin: "0 auto", display: "block" }}
+              style={{ width: "40%", margin: "0 auto", display: "block" }}
             />
             <div className="main-content">
               <div className="form-container">
