@@ -4,6 +4,40 @@
   padding: 0;
 }
 
+/* Subtle animated gradient for the app background */
+.app-background {
+  position: fixed;      /* so it stays behind everything */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;          /* behind main content */
+
+  /* Use partially transparent versions of your gradient colors */
+  background: linear-gradient(
+    270deg,
+    rgba(52, 131, 250, 0.4),
+    rgba(52, 210, 250, 0.4),
+    rgba(52, 131, 250, 0.4)
+  );
+  background-size: 600% 600%;
+  animation: gradientShift 12s ease infinite; /* can reuse the same keyframes */
+}
+
+/* We can reuse the same keyframe or define it again */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 body {
   font-family: "Inter", Arial, sans-serif;
   background: #fdfdfd;
